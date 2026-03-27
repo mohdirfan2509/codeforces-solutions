@@ -1,0 +1,25 @@
+package com.pw.ioi;
+
+import java.util.Scanner;
+
+public class Main33 {
+
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		int test_cases=scan.nextInt();
+		for(int i=0;i<test_cases;i++) {
+			String s=scan.next();
+			System.out.println(s);
+			System.out.print(s.charAt(0));
+			for(int j=0;j<s.length();j++) {
+				if(s.charAt(j)==' ') {
+					System.out.print(s.charAt(j+1));
+				}
+			}
+			System.out.println();
+		}
+
+
+	}
+
+}
