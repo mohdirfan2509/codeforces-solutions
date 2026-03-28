@@ -9,6 +9,6 @@ int main(){
     for(int i=0;i<test_cases;i++){
        string s;
        cin >> s;
-       int arr[3]=s.;
+    //    int arr[3]=s.;
     }
 }
