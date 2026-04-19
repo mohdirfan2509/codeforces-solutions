@@ -1,4 +1,4 @@
-// Question Link: // Question Link: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/B
+// Question Link: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/B
 #include<iostream>
 using namespace std;
 
