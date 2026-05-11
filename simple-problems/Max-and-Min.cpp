@@ -1,0 +1,11 @@
+// Question Link:https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K
+
+#include<iostream>
+using namespace std;
+
+int main(){
+   int a,b,c;
+   cin >> a >> b >> c ;
+   cout << min(a,min(b,c)) << " " << max(a,max(b,c)) << endl;
+}
+
