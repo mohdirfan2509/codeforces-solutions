@@ -13,7 +13,7 @@ int main() {
     }
     sort(arr, arr + n);
     int ans = 0;
-    int dayNum=1;
+    int dayNum = 1;
     for (int i = 0; i < n; i++) {
         if (arr[i] >= dayNum) {
             ans++;
