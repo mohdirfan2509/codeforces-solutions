@@ -10,11 +10,11 @@ int main() {
     cin >> a >> b >> s;
     bool isInPosition=false;
     bool areDigits=true;
-    if(s[a+1+1]=='-'){
+    if(s[a]=='-'){
         isInPosition=true;
     }
     for(int i=0;i<s.size();i++){
-        if(i != a+1+1){
+        if(i != a){
             if(s[i]-'0' < 0 || s[i]-'0' > 9){
                 areDigits=false;
             }
