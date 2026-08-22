@@ -23,7 +23,6 @@ int main() {
             ans.push_back(num);
             num++;
         }
-
         for(auto it:ans){
             cout << it << " ";
         }
