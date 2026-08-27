@@ -7,27 +7,12 @@ using namespace std;
 
 int main() {
     string s;
-    cin >> s;
+    getline(cin, s);
 
-    vector<string> ans;
-
-    stringstream ss(s);
-    string token;
-
-    while (getline(ss, token, ' ')) {
-        ans.push_back(token);
-    }
-
-    int n = ans.size();
-    int count = n;
-    for (int i = 0; i < n; i++) {
-        string temp = ans[i];
-
-        for (char x : temp) {
-            if (x <= 65 || x >= 122) {
-                count--;
-                break;
-            }
+    int count = 0;
+    for (int i = 0; i < s.size(); i++) {
+        if (isalpha(s[i]) && (i == 0 || !isalpha(s[i - 1]))) {
+            count++;
         }
     }
     cout << count << endl;
