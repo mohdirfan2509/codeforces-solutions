@@ -25,13 +25,16 @@ int main() {
         words.push_back(token);
     }
 
-    for(string a:words){
+    for (string a : words) {
+        string temp = a;
 
-        for(char x:a){
-            if(x== '='){
-                x=': ';
+        for (char x : temp) {
+            if (x == '=') {
+                cout << ": ";
+            } else {
+                cout << x;
             }
         }
-        cout << a << endl;
+        cout << endl;
     }
 }
