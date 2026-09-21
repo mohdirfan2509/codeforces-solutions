@@ -10,6 +10,7 @@ int maximum(vector<int>& arr) {
     for (int i = 0; i < n; i++) {
         maxElement = max(maxElement, arr[i]);
     }
+    return maxElement;
 }
 
 int minimum(vector<int>& arr) {
@@ -18,6 +19,7 @@ int minimum(vector<int>& arr) {
     for (int i = 0; i < n; i++) {
         minElement = min(minElement, arr[i]);
     }
+    return minElement;
 }
 
 bool isPrime(int n) {
@@ -61,9 +63,12 @@ int noOfPalindromes(vector<int>& arr) {
 int noOfDivisors(int n) {
     int count = 0;
 
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i * i <= n; i++) {
         if (n % i == 0) {
-            count++;
+            count += 2;
+            if (i * i == n) {
+                count--;
+            }
         }
     }
     return count;
@@ -73,13 +78,14 @@ int elementWithMaxNoOfDivisors(vector<int>& arr) {
     int n = arr.size();
     pair<int, int> currMaxAndElement = {0, 0};
     int ans = 0;
-    for (int i = 1; i <= n; i++) {
-        if (noOfDivisors(arr[i]) > currMaxAndElement.first) {
-            currMaxAndElement = {noOfDivisors(arr[i]), arr[i]};
+    for (int i = 0; i < n; i++) {
+        int divisors = noOfDivisors(arr[i]);
+        if (divisors > currMaxAndElement.first) {
+            currMaxAndElement = {divisors, arr[i]};
             ans = arr[i];
-        } else if (noOfDivisors(arr[i]) == currMaxAndElement.first) {
+        } else if (divisors == currMaxAndElement.first) {
             ans = max(arr[i], currMaxAndElement.second);
-            currMaxAndElement = {noOfDivisors(arr[i]), ans};
+            currMaxAndElement = {divisors, ans};
         }
     }
     return ans;
