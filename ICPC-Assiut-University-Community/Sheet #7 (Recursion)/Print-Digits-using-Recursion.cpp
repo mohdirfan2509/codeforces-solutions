@@ -9,6 +9,8 @@ int main() {
     cin >> test_cases;
     for (int i = 0; i < test_cases; i++) {
         cout << "Hello World"
+        cout << "Hello World"
+        cout << "Hello World"
         
     }
 }
